@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>Bienvenidos</title>
+	<link rel="stylesheet" href="/css/bootstrap.min.css">
+	<link rel="icon" type="image/png" href="/images/favicon.ico">
+	<nav class="navbar navbar-dark bg-dark" style="background-color: #3498DB!important;">
+		<a class="navbar-brand" href="#">Biblioteca Virtual</a>
+	</nav>
+</head>
+
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+				<div class="card-body">
+					<div class="text-center">
+						<img src="/images/Logo.png" class="rounded" alt="..." />
+					</div>
+					<h5 class="card-title text-center">Bienvenidos</h5>
+						<form id="frmLogin" method="POST" action="/postLog">				
+						<div class="form-group">
+							<label for="">Usuario</label>
+							<input type="text" class="form-control" name="email"  id="email" placeholder="USUARIO" required>
+						</div>
+						<div class="form-group">
+							<label for="">Password</label>
+							<input type="password" class="form-control" name="password" id="password" placeholder="PASSWORD" required>
+						</div>					
+
+						<% if(msj !== '') { %>
+							<div class="alert alert-danger" role="alert">
+								Contraseña o Usuario incorrecto. Vuelve a intentarlo
+							</div>
+						<% } %>	
+						<button type="submit" id="btnLogin" class="btn btn-lg btn-dark btn-block text-uppercase" style="background-color: #3498DB!important;">Ingresar</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer class="page-footer font-small blue">
+		<div class="footer-copyright text-center py-3">
+			© 2020 Copyright
+			<a href=""></a>
+		</div>
+	</footer>
+
+	<script src="/js/jquery.min.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+	<script src="/js/login/eveLogin.js"></script>
+	<script src="/js/login/pintarDatos.js"></script>
+</body>
+
+</html>

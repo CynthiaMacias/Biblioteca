@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scaale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TSM CONNECT</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/fonts/css/all.css">
+</head>
+<body>
+	<nav class="nav justify-content-end bg p-3">		
+		<li class="nav-item">
+			<a class="nav-link" href="#">
+				<input type="checkbox" id="toggle">
+				<label for="toggle" id="botonoff"><i class="fas fa-power-off"></i></label>
+			</a>
+		</li>
+	</nav>
+	<div class="wrapper">
+		<nav id="menu">
+			<div id="principal">
+				<div class="menu-header">
+					<strong>TSM</strong>
+					<img src="images/logo.png" width="210" height="90" style=" display:block;margin: 0 auto;"
+						class="rounded-circle" alt="">
+					<h3 style="text-align:center">Biblioteca Virtual</h3>
+				</div>
+
+				<ul class="list-unstyled components">
+					<li class="active">
+						<a href="#sub" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+							<i class="fas fa-copy"></i>
+							Catálogos
+						</a>
+						<ul class="collapse list-unstyled" id="sub">
+							<li class="categoria"><a href="/categoria">Categorías</a></li>
+							<li class="subcat"><a href="/subcategoria">Subcategorias</a></li>
+							<li class="libros"><a href="/libros">Libros</a> </li>							
+						</ul>
+					</li>
+					<li>
+						<a href="#mov" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+							<i class="fas fa-expand-arrows-alt"></i>
+							Movimientos
+						</a>
+						<ul class="collapse list-unstyled" id="mov">
+							<li class="vlibros"><a href="/vlibros">Ver Libros</a></li>
+							
+						</ul>					
+					</li>
+					<li>
+						<a href="#subu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+							<i class="fas fa-user"></i>
+							Administrador
+						</a>
+						<ul class="collapse list-unstyled" id="subu">
+							<li class="usuarios">
+								<li class="usuarios"><a href="/usuarios">Usuarios</a></li>
+							</li>							
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+	
+
+	<div id="div-modal"></div>
+	<script src="/js/jquery.min.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+	<script src="/js/jspdf.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js"></script>
+	<script src="//cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+	<script>
+		$("#botonoff").click(function(){
+			window.location.href="http://localhost:4545/"
+		});
+	</script>
+</body>
+</html>
